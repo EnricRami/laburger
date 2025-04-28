@@ -37,7 +37,7 @@ $stmt->bind_param("sssss", $username, $email, $password, $phone, $address);
 if ($stmt->execute()) {
     echo json_encode(["success" => true]);
 } else {
-    echo json_encode(["success" => false, "error" => "Registration failed."]);
+    echo json_encode(["success" => false, "error" => "Registration failed."]); //Isn't saved in the database
 }
 $stmt->close();
 $conn->close();
