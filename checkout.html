@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout - La Burger</title>
+
+  <!-- Your main CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Boxicons for icons -->
+  <link
+    href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    rel="stylesheet"
+  />
+</head>
+<body>
+
+  <!-- STEPPER -->
+  <div class="checkout-steps">
+    <div class="step active" id="stepper-1">1. Delivery Info</div>
+    <div class="step" id="stepper-2">2. Payment</div>
+    <div class="step" id="stepper-3">3. Confirmation</div>
+  </div>
+
+  <!-- MAIN LAYOUT -->
+  <div class="checkout-layout">
+    <!-- LEFT: Multi-Step Cards -->
+    <div class="checkout-main">
+      <!-- Step 1: Delivery Info -->
+      <div class="checkout-card" id="step-1">
+        <h3>Delivery Information</h3>
+        <form id="delivery-form" autocomplete="off">
+          <div class="input-group">
+            <span class="input-icon"><i class="bx bx-user"></i></span>
+            <input
+              type="text"
+              id="full-name"
+              required
+              placeholder=" "
+              autocomplete="name"
+            />
+            <label for="full-name">Full Name</label>
+          </div>
+          <div class="input-group">
+            <span class="input-icon"><i class="bx bx-envelope"></i></span>
+            <input
+              type="email"
+              id="email"
+              required
+              placeholder=" "
+              autocomplete="email"
+            />
+            <label for="email">Email</label>
+          </div>
+          <div class="input-group">
+            <span class="input-icon"><i class="bx bxs-phone"></i></span>
+            <input
+              type="tel"
+              id="phone"
+              required
+              placeholder=" "
+              autocomplete="tel"
+            />
+            <label for="phone">Phone Number</label>
+          </div>
+          <div class="input-group">
+            <span class="input-icon"><i class="bx bxs-location-plus"></i></span>
+            <input
+              type="text"
+              id="address"
+              required
+              placeholder=" "
+              autocomplete="street-address"
+            />
+            <label for="address">Delivery Address</label>
+          </div>
+          <div class="input-group">
+            <span class="input-icon"><i class="bx bx-message"></i></span>
+            <textarea id="notes" placeholder=" "></textarea>
+            <label for="notes">Order Notes (optional)</label>
+          </div>
+          <button
+            type="button"
+            class="btn"
+            id="next-step"
+          >
+            Continue to Payment
+          </button>
+        </form>
+      </div>
+
+      <!-- Step 2: Payment Info -->
+      <div class="checkout-card" id="step-2" style="display:none;">
+        <h3>Payment Information</h3>
+        <form id="payment-form" autocomplete="off">
+          <div class="input-group">
+            <span class="input-icon"><i class="bx bx-user"></i></span>
+            <input
+              type="text"
+              id="card-name"
+              required
+              placeholder=" "
+            />
+            <label for="card-name">Cardholder Name</label>
+          </div>
+          <div class="input-group">
+            <span class="input-icon"><i class="bx bx-credit-card"></i></span>
+            <input
+              type="text"
+              id="card-number"
+              required
+              placeholder=" "
+              maxlength="19"
+              inputmode="numeric"
+            />
+            <label for="card-number">Card Number</label>
+          </div>
+          <div style="display:flex; gap:1rem;">
+            <div class="input-group" style="flex:1;">
+              <span class="input-icon"><i class="bx bx-calendar"></i></span>
+              <input
+                type="text"
+                id="card-expiry"
+                required
+                placeholder=" "
+                maxlength="5"
+                inputmode="numeric"
+              />
+              <label for="card-expiry">MM/YY</label>
+            </div>
+            <div class="input-group" style="flex:1;">
+              <span class="input-icon"><i class="bx bx-lock-alt"></i></span>
+              <input
+                type="text"
+                id="card-cvv"
+                required
+                placeholder=" "
+                maxlength="3"
+                inputmode="numeric"
+                pattern="\d{3}"
+                title="Enter a 3-digit CVV"
+              />
+              <label for="card-cvv">CVV</label>
+            </div>
+          </div>
+          <button
+            type="button"
+            class="btn"
+            id="place-order"
+          >
+            Place Order
+          </button>
+        </form>
+      </div>
+
+      <!-- Step 3: Confirmation -->
+      <div class="checkout-card" id="step-3" style="display:none;">
+        <div class="confirmation">
+          <i class="bx bx-check-circle"></i>
+          <h3>Thank you for your order!</h3>
+          <p>
+            Your order has been placed successfully.<br />
+            A confirmation email will be sent to you soon.
+          </p>
+          <a href="index.html" class="btn">Back to Home</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Order Summary Sidebar -->
+    <aside class="checkout-summary" id="order-summary">
+      <div class="summary-title">Order Summary</div>
+      <div id="summary-items"></div>
+      <div class="summary-total" id="summary-total">
+        <span>Total:</span>
+        <span>$0.00</span>
+      </div>
+    </aside>
+  </div>
+
+
+  <!-- Checkout stepper & order submission logic -->
+  <script src="checkout.js"></script>
+
+  <!-- Ionicons (optional) -->
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+  ></script>
+</body>
+</html>

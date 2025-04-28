@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website With Login & Registration | Codehal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <div class="logo-img">
+            <img src="download.png" alt="Burger Logo">
+        <h2 class="logo">La Burger</h2>
+        </div>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="navigation">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#menu">Menu</a>
+            <a href="#contact">Contact us</a>
+            <button class="btnLogin-popup">Login</button>
+            <button id="logout-btn"
+            class="btnLogin-popup" 
+            style="display:none;">
+            Logout
+            </button>
+        </nav>
+    
+    
+    
+    </header>
+
+    <div class="wrapper">
+        <span class="icon-close"><i class='bx bx-x'></i></span>
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form id="login-form" action="#">
+                <div class="input-box">
+                    <span class="icon"><i class='bx bx-envelope'></i></span>
+                    <input type="email" name="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><i class='bx bxs-lock-alt'></i></span>
+                    <input type="password" name="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox">Remember me</label>
+                    <a href="#">Forgot Password</a>
+                </div>
+                <button type="submit" class="form-btn">Login</button>
+                <div class="login-register">
+                    <p>Don't have an account?<a href="#" class="register-link">Register</a></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-box register">
+            <h2>Register</h2>
+            <form id="register-form" action="#">
+                <div class="input-box">
+                    <span class="icon"><i class='bx bxs-user'></i></span>
+                    <input type="text" name="username" required>
+                    <label>Username</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><i class='bx bx-envelope'></i></span>
+                    <input type="email" name="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><i class='bx bxs-lock-alt'></i></span>
+                    <input type="password" name="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><i class='bx bxs-phone'></i></span>
+                    <input type="text" name="phone" required>
+                    <label>Phone Number</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><i class='bx bxs-location-plus'></i></span>
+                    <input type="text" name="address" required>
+                    <label>Address</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox" required>I agree to the terms & conditions</label>
+                </div>
+                <button type="submit" class="form-btn">Register</button>
+                <div class="login-register">
+                    <p>Already have an account?<a href="#" class="login-link">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Welcome to</h3>
+            <h1>La Burger</h1>
+            <h3>Where Every Bite Tells a <span>Delicious Story</span>!</h3>
+            <p>La Burger started with a passion for crafting the perfect burger using fresh ingredients and bold flavors. 
+            What began as a small kitchen experiment has grown into a place where every bite brings people together.</p>
+            <div class="social-media">
+                <a href="#"><i class='bx bxl-facebook' ></i></a>
+                <a href="#"><i class='bx bxl-twitter' ></i></a>
+                <a href="#"><i class='bx bxl-instagram' ></i></a>
+                <a href="#"><i class='bx bxl-tiktok' ></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-img">
+        <img src="resturant.png" alt="La Burger resturant">
+        </div>
+
+        <div class="about-content">
+            <h2 class="heading">About <span>La Burger</span></h2>
+            <h3><span>#1</span> In The Middle-East</h3>
+            <p>At La Burger, we believe that every bite should be an experience. As the #1 burger spot in the Middle East, we take pride in crafting mouthwatering burgers using only the finest ingredients—premium beef, freshly baked buns, and handcrafted sauces bursting with flavor. Our journey started with a simple vision: to redefine the burger experience by combining bold flavors with top-quality ingredients. Whether you're here for a quick bite or a feast with friends, La Burger is committed to delivering exceptional taste, quality, and a welcoming atmosphere. Join us and discover why we’re the best in the region—where every burger has a story to tell!</p>
+        <a href="#" class="btn">Read More</a>
+        </div>
+    </section>
+    <section class="menu" id="menu">
+        <h2 class="heading">Our <span>Menu</span></h2>
+
+        <div class="menu-container">
+            <div class="menu-item">
+                <img src="burger1.jpeg" alt="Classic Burger">
+                <h3>Classic Burger</h3>
+                <p>A juicy beef patty, fresh lettuce, tomatoes, and our signature sauce.</p>
+                <span>$8.99</span>
+                <button class="btn add-to-cart">Add to Cart</button>
+            </div>
+            
+            <div class="menu-item">
+                <img src="burger2.jpeg" alt="Cheese Explosion">
+                <h3>Cheese Explosion</h3>
+                <p>Double layers of cheddar cheese, crispy onions, and a special sauce.</p>
+                <span>$10.99</span>
+                <button class="btn add-to-cart">Add to Cart</button>
+                
+            </div>
+
+            <div class="menu-item">
+                <img src="burger3.jpeg" alt="Spicy Inferno">
+                <h3>Spicy Inferno</h3>
+                <p>Spicy grilled chicken, jalapeños, and a fiery hot sauce.</p>
+                <span>$9.99</span>
+                <button class="btn add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="menu-item">
+                <img src="burger4.jpeg" alt="Veggie Delight">
+                <h3>Veggie Delight</h3>
+                <p>A plant-based patty with fresh avocado, lettuce, and tomato.</p>
+                <span>$8.49</span>
+                <button class="btn add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="menu-item">
+                <img src="burger5.jpeg" alt="Bacon Bliss">
+                <h3>Bacon Bliss</h3>
+                <p>Smoky bacon strips layered on a beef patty with melted cheddar.</p>
+                <span>$10.49</span>
+                <button class="btn add-to-cart">Add to Cart</button>
+            </div>
+            
+            <div class="menu-item">
+                <img src="burger6.jpeg" alt="Mushroom Melt">
+                <h3>Mushroom Melt</h3>
+                <p>Grilled mushrooms, Swiss cheese, and a creamy garlic sauce.</p>
+                <span>$9.79</span>
+                <button class="btn add-to-cart">Add to Cart</button>
+            </div>
+            
+            <div class="menu-item">
+                <img src="burger7.jpeg" alt="Crunchy Chicken">
+                <h3>Crunchy Chicken</h3>
+                <p>Crispy fried chicken fillet with tangy mayo and pickles.</p>
+                <span>$8.99</span>
+                <button class="btn add-to-cart">Add to Cart</button>
+            </div>
+            
+            <div class="menu-item">
+                <img src="burger8.jpeg" alt="BBQ Beef Stack">
+                <h3>BBQ Beef Stack</h3>
+                <p>Double beef patties glazed with BBQ sauce and caramelized onions.</p>
+                <span>$11.49</span>
+                <button class="btn add-to-cart">Add to Cart</button>
+            </div>
+            
+            <div class="menu-item">
+                <img src="burger9.jpeg" alt="Avocado Supreme">
+                <h3>Avocado Supreme</h3>
+                <p>Fresh avocado slices, grilled chicken, and chipotle aioli.</p>
+                <span>$9.89</span>
+                <button class="btn add-to-cart">Add to Cart</button>
+            </div>
+            
+            <div class="menu-item">
+                <img src="burger10.jpeg" alt="Triple Tower">
+                <h3>Triple Tower</h3>
+                <p>Three layers of beef, cheese, and flavor-packed toppings.</p>
+                <span>$12.99</span>
+                <button class="btn add-to-cart">Add to Cart</button>
+            </div>
+            
+            <div class="menu-item">
+                <img src="burger11.jpeg" alt="Greek Lamb Burger">
+                <h3>Greek Lamb Burger</h3>
+                <p>Juicy lamb patty, tzatziki sauce, and Mediterranean herbs.</p>
+                <span>$10.99</span>
+                <button class="btn add-to-cart">Add to Cart</button>
+            </div>
+            
+            <div class="menu-item">
+                <img src="burger12.jpeg" alt="Kids Mini Burger">
+                <h3>Kids Mini Burger</h3>
+                <p>Perfectly sized for little hands with classic toppings.</p>
+                <span>$6.49</span>
+                <button class="btn add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+    
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Us</span></h2>
+      
+        <div class="contact-container">
+          <div class="contact-info">
+            <p><strong>Got a question or ready to place an order?</strong><br>
+            We’d love to hear from you! Reach out through any of the channels below and we’ll get back to you as soon as possible.</p>
+      
+            <p><strong>📍 Address:</strong> 123 La Burger Street, City, Country</p>
+            <p><strong>📞 Phone:</strong> +123 456 7890</p>
+            <p><strong>✉️ Email:</strong> contact@laburger.com</p>
+          </div>
+      
+          <!-- Note the id, method, action and name attributes -->
+          <form id="contact-form" action="contact.php" method="POST" class="contact-form">
+            <input type="text"   name="name"    placeholder="Your Name"    required>
+            <input type="email"  name="email"   placeholder="Your Email"   required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+            <p id="contact-feedback" style="margin-top:1rem;color:var(--special-color);display:none;"></p>
+          </form>
+        </div>
+      </section>
+    
+<!-- Cart Icon -->
+<div class="cart-icon" id="cart-icon">
+    <i class='bx bx-cart'></i>
+    <span id="cart-count">0</span>
+  </div>
+  
+  <!-- Cart Modal -->
+  <div class="cart-modal" id="cart-modal">
+    <div class="cart-header">
+      <h2>Your Cart</h2>
+      <i class='bx bx-x' id="close-cart"></i>
+    </div>
+    <div class="cart-items" id="cart-items"></div>
+    <button class="btn checkout-btn">Checkout</button>
+  </div>
+
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>La Burger</h3>
+        <p>Serving flavor-packed burgers with love. Follow us for the latest updates and deals!</p>
+      </div>
+  
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-social">
+        <h4>Follow Us</h4>
+        <div class="social-media">
+            <a href="#"><i class='bx bxl-facebook' ></i></a>
+            <a href="#"><i class='bx bxl-twitter' ></i></a>
+            <a href="#"><i class='bx bxl-instagram' ></i></a>
+            <a href="#"><i class='bx bxl-tiktok' ></i></a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>&copy; 2025 La Burger. All rights reserved.</p>
+    </div>
+  </footer>
+  
+    <script src="contact.js"></script>
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
