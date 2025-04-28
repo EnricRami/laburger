@@ -25,7 +25,7 @@ $stmt->bind_param("s", $email);
 $stmt->execute();
 $stmt->store_result();
 if ($stmt->num_rows > 0) {
-    echo json_encode(["success" => false, "error" => "Email already registered."]);
+    echo json_encode(["success" => false, "error" => "Email already registered. Please use a different email or Login directly."]);
     exit;
 }
 $stmt->close();
